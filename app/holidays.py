@@ -43,6 +43,7 @@ def fetch_next_public_holiday(
     response_body = response.json()
     logger.debug(response_body)
     for holiday in response_body.get("data"):
-        if datetime.date.fromisoformat(holiday.get("date")) > target_date:
+        if datetime.date.fromisoformat(holiday.get("date")) >= target_date:
             return Holiday(**holiday)
-    return fetch_next_public_holiday(datetime.date(target_date.year, 12, 31))
+    next_new_year_day = datetime.date(target_date.year + 1, 1, 1)
+    return fetch_next_public_holiday(next_new_year_day)

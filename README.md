@@ -1,6 +1,6 @@
 ## 日本の祝日 API!!!
 
-[ケンオール](https://kenall.jp/)というサービスから「日本の祝日 API」という新しい Web API を公開されました。以下の通り、Twitter 上でも大変話題になっていますね！
+[ケンオール](https://kenall.jp/)というサービスから「日本の祝日 API」という新しい Web API が公開されました。以下の通り、Twitter 上でも大変話題になっていますね！
 
 https://twitter.com/kenalljp/status/1503884558105989120
 
@@ -131,9 +131,7 @@ python app.py
 ## デプロイして運用するには？
 
 Heroku などの環境で動かすのが簡単かもしれません。 デプロイボタンを置いておきますね。
-
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seratch/jp-holidays-for-slack/tree/main)
-
 なお、ソケットモードはただ WebSocket のクライアントプロセスが起動するだけなので、Heroku で動かす場合は Procfile を web ではなく worker で設定するのがよいかと思います。
 
 また GitHub リポジトリに Dockerfile も置いておきますので、コンテナサービスで動かす場合は、そちらを利用されてもよいかと思います。

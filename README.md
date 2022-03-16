@@ -63,12 +63,18 @@ export SLACK_BOT_TOKEN=xoxb-
 その上で
 
 ```bash
-poetry shell && poetry update
-```
-```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+か、[Poetry](https://python-poetry.org/) に馴染みがあるなら
+
+```bash
+poetry shell && poetry update
+```
+
+でプロジェクトをセットアップした上で、以下のコマンドでアプリを起動してみてください。特にエラーメッセージが出なければ大丈夫でしょう。
 
 ```bash
 python app.py

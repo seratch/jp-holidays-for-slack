@@ -19,6 +19,10 @@
 
 <img width="600" src="https://user-images.githubusercontent.com/19658/158530312-0c2705ae-f614-4a94-a93c-617b291cc05f.png">
 
+こうすることで、以下の様な通知が指定したチャンネルに届きます。
+
+<img width="600" src="https://user-images.githubusercontent.com/19658/158533554-e137712a-3713-4811-b1fd-5e0891823245.png">
+
 もし設定を分けたい場合はワークフローを複数作ってください。このアプリを複数のワークフローで利用することも全く問題ありません。
 
 ### ボットをメンション

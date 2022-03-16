@@ -1,0 +1,26 @@
+{
+  "name": "KENALL Japanese Holidays App for Slack",
+  "description": "Slack app that notifies public holidays in Japan",
+  "repository": "https://github.com/seratch/deepl-for-slack",
+  "keywords": [
+    "Slack",
+    "Slack API",
+    "KENALL",
+    "Heroku"
+  ],
+  "env": {
+    "SLACK_APP_TOKEN": {
+      "description": "Slack App-Level Token (https://api.slack.com/apps)",
+      "value": "xapp-**"
+    },
+    "SLACK_BOT_TOKEN": {
+      "description": "Slack Bot Token (https://api.slack.com/apps)",
+      "value": "xoxb-**"
+    },
+    "KENALL_API_KEY": {
+      "description": "KENALL API Key (https://kenall.jp/home)",
+      "value": "***"
+    }
+  },
+  "image": "heroku/python"
+}

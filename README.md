@@ -1,4 +1,4 @@
-# Notifying National Holiday in Japan to Slack Channels
+# Slack に日本の祝日を通知するアプリです
 
 この Slack アプリは、[ケンオールが提供する日本の祝日 API](https://kenall.jp/docs/API/holidays/) を使って Slack 内で祝日の情報をポストします。
 

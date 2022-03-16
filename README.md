@@ -132,7 +132,7 @@ python app.py
 
 Heroku などの環境で動かすのが簡単かもしれません。 デプロイボタンを置いておきますね。
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seratch/deepl-for-slack/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seratch/jp-holidays-for-slack/tree/main)
 
 なお、ソケットモードはただ WebSocket のクライアントプロセスが起動するだけなので、Heroku で動かす場合は Procfile を web ではなく worker で設定するのがよいかと思います。
 

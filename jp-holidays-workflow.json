@@ -1,0 +1,59 @@
+{
+  "source_id": "399085381057786694",
+  "version": "1",
+  "workflow": {
+    "name": "日本の祝日のお知らせ",
+    "blueprint": {
+      "version": "1",
+      "trigger": {
+        "type": "scheduled",
+        "id": "2cd50c1c-65f3-407e-a8c9-808063dce47b",
+        "config": {
+          "start": 1647388800,
+          "timezone": "Asia/Tokyo",
+          "frequency": {
+            "type": "daily"
+          }
+        }
+      },
+      "steps": [
+        {
+          "type": "extension_step",
+          "id": "3e49063c-0b32-4d77-8342-6b67f2ae94c2",
+          "config": {
+            "app_action": {
+              "name": "日本の祝日を通知",
+              "type": "workflow_step_edit",
+              "payload": null,
+              "action_id": "Aa037Y4E2XDE",
+              "api_app_id": "A03755FTBRT",
+              "callback_id": "japan-holiday-notification"
+            },
+            "app_defined_config": {
+              "inputs": {
+                "channel_ids": {
+                  "value": "CLT1F93TP,C022GBUL3SN"
+                },
+                "days_in_advance": {
+                  "value": "5"
+                }
+              },
+              "outputs": [
+                {
+                  "name": "CLT1F93TP",
+                  "type": "text",
+                  "label": "Posted message timestamp"
+                },
+                {
+                  "name": "C022GBUL3SN",
+                  "type": "text",
+                  "label": "Posted message timestamp"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

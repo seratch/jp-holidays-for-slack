@@ -1,4 +1,5 @@
 import datetime
+import pytz
 from typing import Optional, Union
 from urllib.parse import quote
 
@@ -103,7 +104,8 @@ def enable_workflow_step(app: App, kenall_api_token: str):
         holiday: Optional[Holiday] = None
         try:
             days = int(inputs.get(input_days_in_advance).get("value"))
-            target_date = datetime.date.today() + datetime.timedelta(days=days)
+            now = datetime.datetime.now(pytz.timezone("Asia/Tokyo")).date()
+            target_date = now + datetime.timedelta(days=days)
             holiday = fetch_public_holiday(kenall_api_token, target_date)
         except Exception as err:
             fail(error={"message": f"Notification failed ({err})"})

@@ -9,9 +9,7 @@ license = "MIT"
 python = "^3.9"
 black = "^22.1.0"
 pytz = "^2021.3"
-
-[tool.poetry.dev-dependencies]
-slack-bolt = "^1.11.6"
+slack-bolt = "^1.13.0"
 requests = "^2.27.1"
 
 [build-system]

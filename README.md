@@ -142,6 +142,9 @@ Heroku などの環境で動かすのが簡単かもしれません。 デプロ
 
 また GitHub リポジトリに Dockerfile も置いておきますので、コンテナサービスで動かす場合は、そちらを利用されてもよいかと思います。
 
+もし "We couldn't deploy your app because the source code violates the Salesforce Acceptable Use and External-Facing Services Policy." というエラーで上記の Deploy ボタンが動作しない場合は、このリポジトリを fork した上で `https://heroku.com/deploy?template=https://github.com/{your GitHub account here}/jp-holidays-for-slack/tree/main` を指定してデプロイしてみてください。
+
+
 ## 最後に
 
 ということで、ケンオールの新しい API である「日本の祝日 API」を使った Slack アプリをご紹介しました。

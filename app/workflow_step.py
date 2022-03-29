@@ -90,7 +90,7 @@ def save(ack: Ack, view: dict, update: Update):
             {
                 "name": channel_id,
                 "type": "text",
-                "label": "Posted message timestamp",
+                "label": "チャンネルごとの送信されたメッセージの ts",
             }
             for channel_id in channels
         ],

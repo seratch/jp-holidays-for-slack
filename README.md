@@ -36,7 +36,7 @@ https://github.com/seratch/jp-holidays-for-slack
 
 ### ワークフロービルダーで定期実行してチャンネルに事前通知
 
-以下のスクリーンショットのようなとてもシンプルなワークフローをつくってください。export したものが [jp-holidays-workflow.json](https://github.com/seratch/jp-holidays-for-slack/blob/main/jp-holidays-workflow.json) として、先ほど共有した GitHub リポジトリに置いてありますので、それを import しても OK です。
+以下のスクリーンショットのようなとてもシンプルなワークフローをつくってください。export したものが [jp-holidays-workflow.json](https://github.com/seratch/jp-holidays-for-slack/blob/main/jp-holidays-workflow.json) として、先ほど共有した GitHub リポジトリに置いてありますので、それを参考にしていただいても OK です（ただし、アプリのステップの部分はご自身のものに置き換えてください）。
 
 <img width="600" src="https://user-images.githubusercontent.com/19658/158530327-623422e0-f40f-49d7-860d-046fa656f351.png">
 

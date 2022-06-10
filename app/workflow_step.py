@@ -110,21 +110,23 @@ def enable_workflow_step(app: App, kenall_api_token: str):
         except Exception as err:
             fail(error={"message": f"Notification failed ({err})"})
             return
-        if holiday is not None:
-            try:
-                outputs = {}
-                date = f"{target_date.year} 年 {target_date.month} 月 {target_date.day} 日"
-                wikipedia_url = f"https://ja.wikipedia.org/wiki/{quote(holiday.title)}"
-                message = f"{date}は「<{wikipedia_url}|{holiday.title}>」で祝日ですよー :wave:"
-                for channel in inputs.get(input_channel_ids).get("value").split(","):
-                    response = client.chat_postMessage(
-                        channel=channel,
-                        text=message,
-                    )
-                    outputs[channel] = response.get("message").get("ts")
-                complete(outputs=outputs)
-            except SlackClientError as err:
-                fail(error={"message": f"Notification failed ({err})"})
+        try:
+            outputs = {}
+            if holiday is None:
+                complete(outputs={})
+                return
+            date = f"{target_date.year} 年 {target_date.month} 月 {target_date.day} 日"
+            wikipedia_url = f"https://ja.wikipedia.org/wiki/{quote(holiday.title)}"
+            message = f"{date}は「<{wikipedia_url}|{holiday.title}>」で祝日ですよー :wave:"
+            for channel in inputs.get(input_channel_ids).get("value").split(","):
+                response = client.chat_postMessage(
+                    channel=channel,
+                    text=message,
+                )
+                outputs[channel] = response.get("message").get("ts")
+            complete(outputs=outputs)
+        except SlackClientError as err:
+            fail(error={"message": f"Notification failed ({err})"})
 
     app.step(
         WorkflowStep(
